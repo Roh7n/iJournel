@@ -1,26 +1,143 @@
-@import "tailwindcss";
+/* =========================================
+   1. TAILWIND DIRECTIVES
+   =========================================
+   Imports the foundational Tailwind CSS framework.
+   In Tailwind v4, this single import handles everything.
+*/
+@import 'tailwindcss';
 
+/* =========================================
+   2. DESIGN TOKENS (LIGHT MODE)
+   =========================================
+   Define your base variables here. Using CSS variables
+   makes it easy to build themes and toggle dark mode.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Colors */
+  --background: #ffffff; /* Main background color */
+  --foreground: #171717; /* Main text color */
+
+  /* Brand/Interactive Colors */
+  --primary: #171717; /* Primary brand color (e.g., used for buttons) */
+  --primary-foreground: #ffffff; /* Text color inside primary elements */
+
+  /* Surface Colors */
+  --muted: #f3f4f6; /* Subtle backgrounds for cards or sections */
+  --muted-foreground: #6b7280; /* Subtle text color for secondary info */
+
+  /* Borders & Dividers */
+  --border: #e5e7eb; /* Default border color */
+
+  /* Shapes */
+  --radius: 0.5rem; /* Controls how round your corners are globally */
+}
+
+/* =========================================
+   CUSTOM FONTS
+   ========================================= */
+@font-face {
+  font-family: 'Thick Thinks';
+  src: url('/assets/fonts/Thick%20Thinks.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --radius-md: var(--radius);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Fonts */
+  --font-thick: 'Thick Thinks', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================================
+   5. BASE HTML & BODY STYLES
+   =========================================
+   Foundational styles applied to the fundamental elements.
+*/
+@layer base {
+  h1 {
+    font-size: 200px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 120px;
+    line-height: 1.05;
+  }
+  h3 {
+    font-size: 62px;
+    line-height: 1.1;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.6;
   }
 }
 
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image: url('/assets/images/hero-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  background-repeat: no-repeat;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Fallback to sans-serif if the custom font fails to load */
+  font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
+  position: relative;
+
+  /* Font smoothing makes text look crisper and more premium */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom text selection color */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
