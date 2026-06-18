@@ -58,7 +58,7 @@ agy.md                 — Workspace helper and documentation file (this file)
 
 ```
 
-## Design Rules (Non-Negotiable)
+## Design Rules (Non-Negotioable)
 
 ### Typography
 
@@ -76,25 +76,3 @@ agy.md                 — Workspace helper and documentation file (this file)
 - Components must be designed to fit within the available viewport space using responsive sizing and layout techniques.
 - Scrollable regions are only permitted when explicitly approved as part of the design specification.
 - The browser scrollbar must remain hidden throughout the application.
-
-## Agent Modes
-
-### ENGINEER MODE
-
-Trigger: "add", "build", "implement", "create"
-
-- Read `ARCHITECTURE.md` → relevant component files first
-- Check design rules above before touching visual components
-
-### DEBUG MODE
-
-Trigger: "bug", "broken", "fix", "not working"
-
--
-
-### EXPLORE MODE
-
-Trigger: "how does X work", "explain", "understand"
-
-- Read files, do not modify anything
-- Reference exact file paths and line numbers in your answer
