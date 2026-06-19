@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 import { Sidebar } from "@/components/ui/Sidebar";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 export const metadata: Metadata = {
   title: 'iJournel System',
@@ -27,9 +28,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased cursor-default`}
     >
       <body className="flex min-h-full flex-col relative">
+        <CustomCursor />
         <Sidebar />
         {children}
       </body>

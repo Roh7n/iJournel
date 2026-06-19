@@ -255,7 +255,7 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
 
                   <div className="relative z-10 font-space text-sm sm:text-base font-bold text-black mt-8 overflow-hidden h-20 sm:h-24">
                      <p className="absolute inset-0 leading-tight group-hover:-translate-y-full transition-transform duration-500">
-                       Embracing the friction of the digital medium. Neo-brutalism is not about ugliness; it's about structural honesty and mechanical exposure.
+                       Embracing the friction of the digital medium. Neo-brutalism is not about ugliness; it&apos;s about structural honesty and mechanical exposure.
                      </p>
                      <p className="absolute inset-0 translate-y-full group-hover:translate-y-0 text-[#ff3333] leading-tight transition-transform duration-500">
                        <span className="bg-black text-white px-2 py-1 mr-2 inline-block mb-1">INTERACTION DETECTED</span><br/>

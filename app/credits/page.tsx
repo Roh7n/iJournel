@@ -1,5 +1,4 @@
-import { Suspense } from "react";
-import Image from "next/image";
+
 
 const credits = [
   { role: "ARCHITECT_01", name: "J. DOE", task: "CORE SYSTEMS" },

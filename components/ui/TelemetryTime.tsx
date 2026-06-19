@@ -6,13 +6,13 @@ export function TelemetryTime() {
   const [time, setTime] = useState("00:00:00:000");
   const requestRef = useRef<number | null>(null);
 
-  const updateTime = () => {
-    const now = new Date();
-    setTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}:${now.getMilliseconds().toString().padStart(3, '0')}`);
-    requestRef.current = requestAnimationFrame(updateTime);
-  };
-
   useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}:${now.getMilliseconds().toString().padStart(3, '0')}`);
+      requestRef.current = requestAnimationFrame(updateTime);
+    };
+
     requestRef.current = requestAnimationFrame(updateTime);
     return () => {
       if (requestRef.current) {

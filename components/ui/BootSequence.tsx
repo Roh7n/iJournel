@@ -10,7 +10,7 @@ export function BootSequence() {
     const hasPlayed = sessionStorage.getItem("bootSequencePlayed");
     
     if (!hasPlayed) {
-      setShowBoot(true);
+      setTimeout(() => setShowBoot(true), 0);
       sessionStorage.setItem("bootSequencePlayed", "true");
       
       const timer = setTimeout(() => {
@@ -19,7 +19,7 @@ export function BootSequence() {
 
       return () => clearTimeout(timer);
     } else {
-      setShowBoot(false);
+      setTimeout(() => setShowBoot(false), 0);
     }
   }, []);
 
