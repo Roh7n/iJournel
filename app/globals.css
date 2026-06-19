@@ -30,6 +30,17 @@
 
   /* Shapes */
   --radius: 0.5rem; /* Controls how round your corners are globally */
+
+  /* Responsive Animation Offsets */
+  --offset-pos: 8px;
+  --offset-neg: -8px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --offset-pos: 28px;
+    --offset-neg: -28px;
+  }
 }
 
 /* =========================================
@@ -94,11 +105,11 @@
 @layer base {
   /* Default (Mobile First) */
   h1 {
-    font-size: 70px;
+    font-size: clamp(60px, 8vw, 80px);
     line-height: 1.1;
   }
   h2 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
   }
   h3 {
@@ -174,3 +185,31 @@ body {
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
+
+/* Living UI Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes glitch {
+  0% { opacity: 1; }
+  10% { opacity: 0.8; }
+  20% { opacity: 1; }
+  30% { opacity: 0.9; }
+  50% { opacity: 0.1; }
+  60% { opacity: 1; }
+  80% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.animate-glitch {
+  animation: glitch 4s infinite random;
+}
+

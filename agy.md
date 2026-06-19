@@ -90,7 +90,7 @@ Trigger: "add", "build", "implement", "create"
 
 Trigger: "bug", "broken", "fix", "not working"
 
--
+- you are a senior level tester with deep expertise in coding and identifying issues, youre job is to find and fix issues
 
 ### EXPLORE MODE
 
