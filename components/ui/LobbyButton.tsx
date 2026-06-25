@@ -6,6 +6,12 @@ export function LobbyButton({ isLobby, toggleLobby }: { isLobby: boolean; toggle
   return (
     <motion.div 
       className="fixed bottom-8 right-8 sm:right-16 z-50 flex flex-col items-end"
+      animate={{ y: [0, -10, 0] }}
+      transition={{ 
+        duration: 1.5, 
+        repeat: Infinity, 
+        ease: "easeInOut" 
+      }}
     >
       <div className="text-xs font-space font-bold text-white/80 mb-2 pointer-events-none uppercase tracking-widest drop-shadow-md">
          System Status: <span className={isLobby ? "text-green-400" : "text-[#ff3333]"}>{isLobby ? "LOBBY SECURED" : "PENDING AUTH"}</span>

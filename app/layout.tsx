@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 import { Sidebar } from "@/components/ui/Sidebar";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { GlobalTelemetry } from "@/components/ui/GlobalTelemetry";
 
 export const metadata: Metadata = {
   title: 'iJournel System',
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col relative">
         <CustomCursor />
         <Sidebar />
+        <GlobalTelemetry />
         {children}
       </body>
     </html>

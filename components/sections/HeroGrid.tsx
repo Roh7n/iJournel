@@ -245,7 +245,7 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                   </div>
 
                   <div className="relative z-10 flex flex-col mt-4">
-                    <span className="font-thick text-5xl sm:text-7xl lg:text-[5rem] leading-none text-black uppercase tracking-tighter group-hover:text-[#ff3333] transition-colors duration-500">
+                    <span className="font-thick text-5xl sm:text-7xl lg:text-[5rem] leading-none text-black uppercase group-hover:text-[#ff3333] transition-colors duration-500">
                       Raw Function
                     </span>
                     <span className="font-thick text-5xl sm:text-7xl lg:text-[5rem] leading-none text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] group-hover:translate-x-4 transition-transform duration-500">
@@ -253,16 +253,8 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                     </span>
                   </div>
 
-                  <div className="relative z-10 font-space text-sm sm:text-base font-bold text-black mt-8 overflow-hidden h-20 sm:h-24">
-                     <p className="absolute inset-0 leading-tight group-hover:-translate-y-full transition-transform duration-500">
-                       Embracing the friction of the digital medium. Neo-brutalism is not about ugliness; it&apos;s about structural honesty and mechanical exposure.
-                     </p>
-                     <p className="absolute inset-0 translate-y-full group-hover:translate-y-0 text-[#ff3333] leading-tight transition-transform duration-500">
-                       <span className="bg-black text-white px-2 py-1 mr-2 inline-block mb-1">INTERACTION DETECTED</span><br/>
-                       The grid is responsive. The system is alive. Awaiting final sequence.
-                     </p>
-                  </div>
-                </motion.div>
+                  
+                </motion.div>   
               )}
            </AnimatePresence>
         </motion.div>

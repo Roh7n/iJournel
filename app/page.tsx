@@ -2,8 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState, useEffect } from "react";
-import { TelemetryTime } from "@/components/ui/TelemetryTime";
-import { TelemetryMem } from "@/components/ui/TelemetryMem";
 import { BootSequence } from "@/components/ui/BootSequence";
 import { LobbyButton } from "@/components/ui/LobbyButton";
 import { HeroGrid } from "@/components/sections/HeroGrid";
@@ -41,11 +39,7 @@ function HomeContent() {
         {/* Dark overlay for legibility without heavy blur */}
         <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-        {/* Telemetry Top Right */}
-        <TelemetryTime />
 
-        {/* Telemetry Bottom Left */}
-        <TelemetryMem isLobby={isLobby} />
 
         {/* Toggle Lobby Button */}
         <LobbyButton isLobby={isLobby} toggleLobby={toggleLobby} />

@@ -63,7 +63,7 @@ agy.md                 — Workspace helper and documentation file (this file)
 ### Typography
 
 - Do not apply font sizes inline or within individual components.
-- All typography scales (headings, body text, captions, labels, etc.) are defined centrally in `globals.css`.
+- All typography scales (headings, font-size, body text, captions, labels, etc.) are defined centrally in `globals.css`.
 - Use the predefined typography utility classes and design tokens exclusively.
 - Any new font size requirements must be added to the global typography system rather than implemented locally.
 

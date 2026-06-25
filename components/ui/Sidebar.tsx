@@ -9,7 +9,7 @@ export function Sidebar() {
 
   const links = [
     { name: "HOME", href: "/", offset: "-translate-x-4" },
-    { name: "LABS", href: "#", offset: "translate-x-4" },
+    { name: "BLOGS", href: "#", offset: "translate-x-4" },
     { name: "CREDITS", href: "/credits", offset: "-translate-x-4" }
   ];
 
