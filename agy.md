@@ -15,7 +15,7 @@
 
 ## Mini Context
 
-This is a Next.js 16 (App Router) project with a brutalism themed showcase design oriented project
+This is a Next.js 16 (App Router) project with a brutalism themed showcase design oriented project, the main content is similar to the name of the project, an internet journel of mine which consist of the about page with the lobby section, then in Logs page it consists of the blogs which i will write and publish
 
 ## Key Commands
 
