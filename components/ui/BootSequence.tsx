@@ -53,7 +53,7 @@ export function BootSequence() {
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white font-space overflow-hidden"
         >
           {/* Cygilism / Brutalist loading elements */}
-          <div className="absolute inset-0 bg-noise opacity-20 pointer-events-none mix-blend-screen" />
+          <div className="absolute inset-0 bg-[url('/assets/images/noise.png')] opacity-20 pointer-events-none mix-blend-screen" />
           <motion.h1 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
