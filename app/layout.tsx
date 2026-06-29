@@ -30,8 +30,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased cursor-default`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col relative">
+      <body className="flex min-h-full flex-col relative" suppressHydrationWarning>
         <CustomCursor />
         <Sidebar />
         <GlobalTelemetry />

@@ -137,7 +137,7 @@ export function LogsSection() {
   };
 
   return (
-    <section className="relative w-full h-[100vh] flex flex-col justify-center overflow-hidden bg-white/5">
+    <section className="relative w-full h-[100vh] flex flex-col justify-center overflow-hidden bg-white/5 pb-24 sm:pb-32">
       {/* Title / Header */}
       <div className="w-full px-[15vw] z-[60] pointer-events-none flex flex-col mb-4 sm:mb-8">
         <div className="font-space text-xs sm:text-sm font-bold tracking-widest text-[#ff3333] uppercase mb-2">

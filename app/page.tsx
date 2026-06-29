@@ -35,7 +35,7 @@ function HomeContent() {
     <>
       <BootSequence />
 
-      <section className="flex min-h-screen w-full flex-col items-center justify-center gap-8 p-0 sm:p-20 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/images/hero-bg.webp')" }}>
+      <section className="flex h-[100dvh] w-full flex-col items-center justify-center gap-4 sm:gap-8 p-4 sm:p-10 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/images/hero-bg.webp')" }}>
         {/* Dark overlay for legibility without heavy blur */}
         <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
