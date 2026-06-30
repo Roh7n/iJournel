@@ -28,7 +28,7 @@ export function BootSequence() {
       {showBoot === null && (
         <div 
           id="initial-boot-blocker" 
-          className="fixed inset-0 z-[100] bg-black"
+          className="fixed inset-0 z-[999] bg-black"
           suppressHydrationWarning
         >
           <script
@@ -50,7 +50,7 @@ export function BootSequence() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: "-100vh" }}
           transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }} // Ocean wave fluid easing
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white font-space overflow-hidden"
+          className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-black text-white font-space overflow-hidden"
         >
           {/* Cygilism / Brutalist loading elements */}
           <div className="absolute inset-0 bg-[url('/assets/images/noise.png')] opacity-20 pointer-events-none mix-blend-screen" />
