@@ -58,15 +58,15 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
           <motion.div 
             variants={{ homeRest: { opacity: 1 }, lobbyRest: { opacity: 1 }, hover: { opacity: 0 } }} 
             transition={{ duration: 0.5 }}
-            className={`absolute inset-0 bg-black ${isLobby ? "rounded-tr-xl rounded-bl-xl" : "rounded-br-xl rounded-tl-xl"}`}
+            className={`absolute inset-0 -translate-y-[1%] bg-black ${isLobby ? "rounded-tr-xl rounded-bl-xl" : "rounded-br-xl rounded-tl-xl"}`}
           ></motion.div>
           
           <motion.div 
             layout
             variants={
               isDesktop 
-                ? { homeRest: { x: 28, y: -28 }, lobbyRest: { x: -28, y: -28 }, hover: { x: 0, y: 0 } }
-                : { homeRest: { x: 0, y: 0 }, lobbyRest: { x: 0, y: 0 }, hover: { x: 0, y: 0 } }
+                ? { homeRest: { x: 28, y: -30 }, lobbyRest: { x: -28, y: -30 }, hover: { x: 0, y: -2 } }
+                : { homeRest: { x: 0, y: -2 }, lobbyRest: { x: 0, y: -2 }, hover: { x: 0, y: 0 } }
             } 
             transition={{ duration: 0.3 }}
             className="relative z-10 h-full w-full rounded-xl border-2 border-black bg-gray-100 flex items-center justify-center overflow-hidden"
@@ -91,22 +91,22 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                   exit={{ opacity: 0, y: -20 }}
                   className="absolute inset-0 p-4 sm:p-8 text-left flex flex-col justify-center overflow-hidden"
                 >
-                  <h2 className="font-thick absolute top-4 left-4 sm:top-8 sm:left-8 text-black text-xl sm:text-2xl underline decoration-4 decoration-[#ff3333] underline-offset-4 z-10">
+                  <h2 className="font-thick absolute top-1 left-4 sm:top-8 sm:left-8 text-black md:text-2xl text-lg underline decoration-4 decoration-[#ff3333] underline-offset-4 z-10">
                     LATEST LOGS
                   </h2>
                   
-                  <div className="mt-12 sm:mt-16 space-y-3 sm:space-y-4 font-space text-xs sm:text-sm pr-2 sm:pr-4">
-                     <div className="border-l-4 border-black pl-3 group cursor-pointer hover:bg-black/5 p-2 transition-colors">
-                        <div className="font-bold text-[#ff3333]">2026.06.29</div>
-                        <div className="font-bold text-black group-hover:translate-x-2 transition-transform duration-300">RENAMED BLOGS TO LOGS.</div>
+                  <div className="mt-5 sm:mt-16 space-y-1.5 sm:space-y-4 font-space text-[10px] sm:text-sm pr-1 sm:pr-4">
+                     <div className="border-l-2 sm:border-l-4 border-black pl-2 sm:pl-3 group cursor-pointer hover:bg-black/5 py-1 sm:p-2 transition-colors">
+                        <div className="font-bold text-[#ff3333] mb-0.5 sm:mb-0">2026.06.29</div>
+                        <div className="font-bold text-black leading-tight group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300">RENAMED BLOGS TO LOGS.</div>
                      </div>
-                     <div className="border-l-4 border-black pl-3 group cursor-pointer hover:bg-black/5 p-2 transition-colors">
-                        <div className="font-bold text-[#ff3333]">2026.06.25</div>
-                        <div className="font-bold text-black group-hover:translate-x-2 transition-transform duration-300">UPDATED AGENT MODES DOCUMENTATION.</div>
+                     <div className="border-l-2 sm:border-l-4 border-black pl-2 sm:pl-3 group cursor-pointer hover:bg-black/5 py-1 sm:p-2 transition-colors">
+                        <div className="font-bold text-[#ff3333] mb-0.5 sm:mb-0">2026.06.25</div>
+                        <div className="font-bold text-black leading-tight group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300">UPDATED AGENT MODES DOCUMENTATION.</div>
                      </div>
-                     <div className="border-l-4 border-black pl-3 group cursor-pointer hover:bg-black/5 p-2 transition-colors">
-                        <div className="font-bold text-[#ff3333]">2026.06.25</div>
-                        <div className="font-bold text-black group-hover:translate-x-2 transition-transform duration-300">ADDED BOUNCE ANIMATION TO UI.</div>
+                     <div className="border-l-2 sm:border-l-4 border-black pl-2 sm:pl-3 group cursor-pointer hover:bg-black/5 py-1 sm:p-2 transition-colors">
+                        <div className="font-bold text-[#ff3333] mb-0.5 sm:mb-0">2026.06.25</div>
+                        <div className="font-bold text-black leading-tight group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300">ADDED BOUNCE ANIMATION TO UI.</div>
                      </div>
                   </div>
                 </motion.div>
@@ -166,19 +166,19 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                   exit={{ opacity: 0 }}
                   className="absolute inset-0 flex flex-col bg-[#f4f4f4] p-3 sm:p-6"
                 >
-                  <div className="border-b-4 border-black pb-2 sm:pb-4 mb-2 sm:mb-4 font-thick uppercase tracking-widest flex justify-between items-center text-xs sm:text-base">
-                    <span>iJournel Guestbook</span>
-                    <span className="w-3 h-3 bg-red-600 animate-pulse rounded-full border border-black"></span>
+                  <div className="border-b-2 sm:border-b-4 border-black pb-1.5 sm:pb-4 mb-2 sm:mb-4 font-thick uppercase tracking-widest flex justify-between items-center text-[9px] sm:text-base">
+                    <span className="truncate mr-2">iJournel Guestbook</span>
+                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-red-600 animate-pulse rounded-full border border-black shrink-0"></span>
                   </div>
-                  <div className="flex-1 overflow-y-auto font-space space-y-4 pr-2 font-bold text-left">
-                    <div className="bg-black text-white p-2 rounded-br-xl w-fit">SYS: Terminal active. Leave your mark.</div>
-                    <div className="bg-gray-300 p-2 border border-black rounded-tl-xl text-black w-fit ml-auto">USER_994: Loving the brutalist vibes.</div>
-                    <div className="bg-white p-2 border border-black rounded-bl-xl text-black w-fit">GUEST_11: The animations are so smooth.</div>
-                    <div className="bg-[#ff3333] text-white p-2 border border-black rounded-br-xl font-thick w-fit">ADMIN: WELCOME TO THE ARCHIVE.</div>
+                  <div className="flex-1 overflow-y-auto font-space space-y-2 sm:space-y-4 pr-1 sm:pr-2 font-bold text-left text-[8.5px] leading-tight sm:text-sm">
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-black text-white p-1.5 sm:p-2 rounded-br-lg sm:rounded-br-xl w-fit max-w-[90%]">SYS: Terminal active.</motion.div>
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-gray-300 p-1.5 sm:p-2 border border-black rounded-tl-lg sm:rounded-tl-xl text-black w-fit ml-auto max-w-[90%]">USER_994: Loving the brutalist vibes.</motion.div>
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white p-1.5 sm:p-2 border border-black rounded-bl-lg sm:rounded-bl-xl text-black w-fit max-w-[90%]">GUEST_11: The animations are so smooth.</motion.div>
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-[#ff3333] text-white p-1.5 sm:p-2 border border-black rounded-br-lg sm:rounded-br-xl font-space w-fit max-w-[90%]">ADMIN: WELCOME TO THE ARCHIVE.</motion.div>
                   </div>
-                  <div className="mt-4 border-t-4 border-black pt-4 flex">
-                    <input type="text" aria-label="Chat input" className="flex-1 bg-white border-2 border-black px-2 sm:px-3 py-1 sm:py-2 outline-none font-space font-bold placeholder-black/50 text-xs sm:text-base" placeholder="SIGN GUESTBOOK..." />
-                    <button aria-label="Send message" className="font-thick bg-black text-white px-2 sm:px-4 border-y-2 border-r-2 border-black hover:bg-[#ff3333] transition-colors text-xs sm:text-base">SIGN</button>
+                  <div className="mt-2 sm:mt-4 border-t-2 sm:border-t-4 border-black pt-2 sm:pt-4 flex">
+                    <input type="text" aria-label="Chat input" className="flex-1 bg-white border-2 border-black px-1.5 sm:px-3 py-1 sm:py-2 outline-none font-space font-bold placeholder-black/50 text-[8.5px] sm:text-base min-w-0" placeholder="SIGN..." />
+                    <button aria-label="Send message" className="font-thick bg-black text-white px-2 sm:px-4 border-y-2 border-r-2 border-black hover:bg-[#ff3333] transition-colors text-[9px] sm:text-base shrink-0">SIGN</button>
                   </div>
                 </motion.div>
               ) : (
@@ -190,10 +190,10 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                   className="absolute inset-0 flex flex-col sm:flex-row overflow-hidden"
                 >
                   <div className="flex-1 px-4 sm:px-10 lg:px-12 flex flex-col justify-center">
-                    <h4 className="font-space leading-relaxed text-black text-left text-sm sm:text-lg z-10">
+                    <h4 className="font-space leading-normal md:leading-relaxed text-black text-left text-xs md:text-xl z-10">
                       <span className="font-bold bg-black text-white px-2 py-1 mr-2">/ABOUT:</span> 
                       iJournel is my personal laboratory for exploring brutalist web design and experimental user interfaces. I aim to reject generic polished forms and prioritize raw utility, pushing the boundaries of frontend architecture through Next.js and high-tension aesthetics.
-                      <br /><br />
+                      <br />
                       <span role="link" tabIndex={0} className="inline-block mt-2 font-bold bg-[#ff3333] text-white px-4 py-2 border-2 border-black hover:bg-black transition-colors cursor-pointer mr-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] uppercase tracking-widest">[CONTACT]</span> 
                       <Link href="/logs" className="inline-block mt-2 font-bold bg-white text-black px-4 py-2 border-2 border-black hover:bg-black hover:text-white transition-colors cursor-pointer shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] uppercase tracking-widest">[LOGS]</Link> 
                     </h4>
@@ -216,7 +216,7 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
         
         <motion.div 
           layout="position"
-          className={`relative h-full w-full overflow-hidden rounded-xl z-10 border-2 border-transparent ${isLobby ? "col-span-4 sm:col-span-5 order-1" : "col-span-4 sm:col-span-3 order-2"}`}
+          className={`relative h-full w-full overflow-hidden rounded-xl z-10 border-2 border-transparent ${isLobby ? "col-span-4 sm:col-span-5 order-1 ml-0.5" : "col-span-4 sm:col-span-3 order-2 -ml-0.5"}`}
         >
            <AnimatePresence mode="wait">
               {isLobby ? (
@@ -237,7 +237,7 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.05 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute inset-0 bg-[#e5e5e5] p-6 sm:p-12 flex flex-col justify-between overflow-hidden group cursor-crosshair"
+                  className="absolute inset-0 bg-[#e5e5e5] py-14 sm:p-12 flex flex-col justify-between overflow-hidden group cursor-crosshair"
                 >
                   <div className="absolute inset-0 bg-black/5 pointer-events-none z-0" />
                   
@@ -245,8 +245,8 @@ export function HeroGrid({ isLobby, isDesktop }: { isLobby: boolean; isDesktop: 
                     [ Architecture / Protocol 001 ]
                   </div>
 
-                  <div className="relative z-10 flex flex-col mt-4">
-                    <span className="font-thick text-5xl sm:text-7xl lg:text-[5rem] leading-none text-black uppercase group-hover:text-[#ff3333] transition-colors duration-500">
+                  <div className="relative z-10 flex flex-col ">
+                    <span className="font-thick text-4xl sm:text-7xl lg:text-[5rem] leading-none text-black uppercase group-hover:text-[#ff3333] transition-colors duration-500">
                       Raw Function
                     </span>
                     <span className="font-thick text-5xl sm:text-7xl lg:text-[5rem] leading-none text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] group-hover:translate-x-4 transition-transform duration-500">

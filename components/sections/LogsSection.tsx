@@ -139,14 +139,14 @@ export function LogsSection() {
   return (
     <section className="relative w-full h-[100vh] flex flex-col justify-center overflow-hidden bg-white/5 pb-24 sm:pb-32">
       {/* Title / Header */}
-      <div className="w-full px-[15vw] z-[60] pointer-events-none flex flex-col mb-4 sm:mb-8">
-        <div className="font-space text-xs sm:text-sm font-bold tracking-widest text-[#ff3333] uppercase mb-2">
+      <div className="w-full pl-[10vw] pr-20 lg:px-[15vw] z-[60] pointer-events-none flex flex-col mb-4 sm:mb-8 mt-16 lg:mt-0">
+        <div className="font-space text-xs sm:text-sm font-bold tracking-widest text-[#ff3333] uppercase mb-2 md:mb-4">
           [ SYSTEM ARCHIVE ]
         </div>
-        <h1 className="font-thick text-5xl sm:text-7xl lg:text-[7rem] leading-none text-white uppercase drop-shadow-[0_4px_0_rgba(255,51,51,1)]">
+        <h1 className="font-thick text-[3rem] sm:text-7xl lg:text-[8rem] leading-none text-white uppercase drop-shadow-[0_4px_0_rgba(255,51,51,1)] break-words">
           LOGS
         </h1>
-        <div className="w-32 h-2 bg-white/20 mt-4" />
+        <div className="w-full h-2 bg-white/20 mt-1 md:mt-6" />
       </div>
 
       {/* Horizontal Slider Track */}
