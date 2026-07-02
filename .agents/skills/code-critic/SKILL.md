@@ -1,180 +1,93 @@
 ---
 name: code-critic
-description: Critically evaluates code for correctness, architecture, maintainability, performance, accessibility, and long-term quality. Use after implementing features, reviewing pull requests, refactoring, or before merging changes.
+description: Reviews code for correctness, architecture, maintainability, performance, accessibility, and overall quality before merge or release.
 ---
 
 # Code Critic Skill
 
-Act as an experienced software engineer performing a rigorous engineering review.
+Perform a rigorous engineering review. Your objective is to identify bugs, risks, unnecessary complexity, technical debt, and opportunities for improvement.
 
-Your goal is **not** to approve code—it is to find weaknesses, risks, unnecessary complexity, and opportunities for improvement.
+## Review Checklist
 
----
+### 1. Correctness
 
-# Review Process
+- Meets requirements
+- Handles edge cases and errors
+- Valid loading/empty states
+- No logical bugs
 
-## 1. Correctness
+### 2. Architecture
 
-- Verify the implementation satisfies the requirements.
-- Look for logical bugs.
-- Validate edge cases.
-- Check error handling.
-- Verify loading and empty states.
+- Follows project architecture
+- Clear separation of concerns
+- Appropriate abstractions
+- Consistent patterns
+- Avoids duplication and over-engineering
 
----
-
-## 2. Architecture
-
-Evaluate whether the solution fits the project's architecture.
-
-Check for:
-
-- Separation of concerns
-- Single Responsibility Principle
-- Reusable abstractions
-- Component boundaries
-- Appropriate file organization
-- Consistency with existing patterns
-
-Challenge unnecessary abstractions as well as duplicated logic.
-
----
-
-## 3. Readability
-
-Review for:
+### 3. Readability
 
 - Clear naming
-- Self-documenting code
-- Function length
-- Component complexity
-- Proper comments
-- Dead code
-- Magic numbers
-- Unused imports
+- Simple, self-explanatory code
+- Reasonable function/component size
+- Remove dead code, magic numbers, unused imports
 
-If code can be simpler, recommend a simpler implementation.
+### 4. Maintainability
 
----
+- Low coupling
+- Reusable logic
+- No hidden dependencies
+- Easy to extend
+- Avoid hardcoded values
 
-## 4. Maintainability
+### 5. Performance
 
-Identify code that will become difficult to extend.
+Review only meaningful optimizations:
 
-Look for:
+- Prevent unnecessary renders
+- Avoid expensive work
+- Minimize bundle impact
+- Efficient animations and DOM updates
 
-- Tight coupling
-- Repeated logic
-- Hidden dependencies
-- Hardcoded values
-- Poor scalability
-- Missing abstractions
-
----
-
-## 5. Performance
-
-Check for obvious inefficiencies.
-
-Examples include:
-
-- Unnecessary re-renders
-- Expensive computations
-- Inefficient loops
-- Large bundle impact
-- Missing memoization where justified
-- Inefficient animations
-- Excessive DOM updates
-
-Only recommend optimizations that provide measurable value.
-
----
-
-## 6. Accessibility
-
-Verify:
+### 6. Accessibility
 
 - Semantic HTML
-- Keyboard navigation
+- Keyboard support
 - Focus management
-- ARIA usage
-- Color contrast
-- Screen reader compatibility
+- Proper ARIA
+- Adequate color contrast
 
-Accessibility issues should always be highlighted.
+### 7. Responsive Design
 
----
+- No overflow
+- Consistent breakpoints
+- Works across screen sizes
 
-## 7. Responsive Design
+### 8. Styling
 
-Inspect:
+- Consistent Tailwind usage
+- Uses design tokens
+- Consistent spacing and typography
+- Avoid duplicated utilities and unnecessary inline styles
 
-- Layout behavior
-- Overflow issues
-- Mobile usability
-- Desktop scaling
-- Breakpoint consistency
-- Flexible sizing
+### 9. Framework Practices
 
----
-
-## 8. Tailwind & Styling
-
-Review styling for consistency.
-
-Check:
-
-- Utility consistency
-- Design token usage
-- Typography system
-- Spacing rhythm
-- Color consistency
-- Avoid duplicated utility patterns
-- Avoid inline styles unless necessary
+Follow project conventions (Next.js, React, TypeScript, Tailwind v4, Framer Motion, and `agy.md`).
 
 ---
 
-## 9. Framework Best Practices
+## Feedback Format
 
-Verify adherence to project conventions.
+For each issue provide:
 
-Examples:
+- **Problem**
+- **Why it matters**
+- **Severity:** Critical / High / Medium / Low
+- **Recommended fix**
+- **Example** (when helpful)
 
-- Next.js App Router patterns
-- React best practices
-- TypeScript typing
-- Framer Motion usage
-- Tailwind v4 conventions
-- Project-specific guidelines from `agy.md`
+## Principles
 
----
-
-# Feedback Guidelines
-
-For every issue found:
-
-1. Explain the problem.
-2. Explain why it matters.
-3. Assess its severity:
-   - Critical
-   - High
-   - Medium
-   - Low
-4. Recommend the preferred solution.
-5. Include an example implementation when appropriate.
-
----
-
-# Review Philosophy
-
-Do not praise code unnecessarily.
-
-Challenge assumptions.
-
-Prefer simpler solutions over clever ones.
-
-Reject unnecessary complexity.
-
-Identify technical debt before it accumulates.
-
-A successful review improves the codebase, not just the current implementation.
+- Prioritize correctness over approval.
+- Prefer simple solutions.
+- Question unnecessary complexity.
+- Identify technical debt early.

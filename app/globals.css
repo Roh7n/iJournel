@@ -95,6 +95,11 @@
   /* Custom Fonts */
   --font-thick: 'Thick Thinks', sans-serif;
   --font-space: 'Space Grotesk', sans-serif;
+
+  /* Custom Typography Scales */
+  --text-huge: 10rem;
+  --text-super: 8rem;
+  --text-tiny: 10px;
 }
 
 /* =========================================

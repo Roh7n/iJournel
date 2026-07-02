@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, PanInfo } from "motion/react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { TimelineRuler } from "../ui/TimelineRuler";
 
@@ -127,7 +127,7 @@ export function LogsSection() {
   }, [navigate]);
 
   // Drag handler
-  const handleDragEnd = (e: any, { offset }: any) => {
+  const handleDragEnd = (e: MouseEvent | TouchEvent | PointerEvent, { offset }: PanInfo) => {
     const swipeThreshold = 50;
     if (offset.x < -swipeThreshold) {
       navigate('next');
@@ -143,7 +143,7 @@ export function LogsSection() {
         <div className="font-space text-xs sm:text-sm font-bold tracking-widest text-[#ff3333] uppercase mb-2 md:mb-4">
           [ SYSTEM ARCHIVE ]
         </div>
-        <h1 className="font-thick text-[3rem] sm:text-7xl lg:text-[8rem] leading-none text-white uppercase drop-shadow-[0_4px_0_rgba(255,51,51,1)] break-words">
+        <h1 className="font-thick text-5xl sm:text-7xl lg:text-super leading-none text-white uppercase drop-shadow-[0_4px_0_rgba(255,51,51,1)] break-words">
           LOGS
         </h1>
         <div className="w-full h-2 bg-white/20 mt-1 md:mt-6" />

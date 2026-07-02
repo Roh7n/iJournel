@@ -39,14 +39,11 @@ function HomeContent() {
         {/* Dark overlay for legibility without heavy blur */}
         <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
 
-
-
         {/* Toggle Lobby Button */}
         <LobbyButton isLobby={isLobby} toggleLobby={toggleLobby} />
 
         {/* Main Grid Content */}
         <HeroGrid isLobby={isLobby} isDesktop={isDesktop} />
-
       </section>
 
       {/* 10% Left Vertical Line */}
